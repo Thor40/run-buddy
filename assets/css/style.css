@@ -184,18 +184,17 @@ section {
 
 /*Meet Trainers*/
 .trainers {
-    text-align: center; /*SECTION ALIGN*/
-    overflow: auto;
+    text-align: center;
 }
 
-/*indiviudal trainer style*/
 .trainer {
     width: 900px;
     margin: 0 auto 30px auto;
-    color: #fce138;
     background: #024e76;
-  }
-  
+    color: #fce138;
+    overflow: auto;
+}
+
 .trainer img {
     width: 35%;
     float: left;
