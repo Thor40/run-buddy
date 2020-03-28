@@ -351,12 +351,14 @@ section {
 .trainer-bio h3 {
     font-size: 22px;
     margin-bottom: 5px;
+    display: none;
 }
 
 .trainer-bio h4 {
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
+    display: none;
 }
 
 .trainer-bio p {
@@ -399,20 +401,21 @@ section {
     top: 200px;
     transition: 0.6s;
 }
-.trainer:hover .trainer-img {
-    opacity: 1;
-}
 
 .trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
     top: 0;
     transition: 0.6s;
 }
 
+.trainer-img:hover::after {
+    opacity: 1;
+}
+
 .trainer-img::after {
     content: "";
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(252, 225, 56, 0.3), var(--secondary-color));
+    background: linear-gradient(rgba(252, 225, 56, 0.3), var(--secondary-color, .5));
     position: absolute;
     top: 0;
     left: 0;
@@ -626,6 +629,10 @@ section {
 
     .step-text {
         flex: 100%;
+    }
+
+    .trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4, .trainer-img::after{
+        display: none;
     }
 }
 
